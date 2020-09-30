@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Using plain html in Pug</title> -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>#{title}</title>
+</head>
+<style>
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::before{
+    opacity: 0.5; 
+    height: 100%;
+    content: "";
+    width: 100%;
+    z-index: -1;
+    top: 0px;
+    position: absolute;
+    background: url('https://img.etimg.com/thumb/msid-77164796,width-640,resizemode-4,imgsize-218976/what-gyms-can-do.jpg');
+    /* background-image: url('./gym.jpg')no-repeat center center; */
+   }
+nav{
+    background-color: #302d2d;
+    padding: 12px 
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    list-style: none;
+    padding: 3px 12px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h2{
+    text-align: center;
+    color: black;
+}
+
+.container{
+margin: 35px 0px; 
+}
+
+input, textarea{
+    display: block;
+    padding: 3px;
+    margin: 15px auto;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn{
+    margin: 4px auto;
+    display: block;
+    padding: 5px 12px;
+    background: #302d2d;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    outline: none;
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <h2>Get this gym membership for 60$ - Fill this form now!</h2>
+
+        <form action='/add_member' method='POST'>
+            <input type="text" name="first_name" placeholder="Enter your name">
+            <input type="text" name="age" placeholder="Enter your age">
+            <input type="text" name="gender" placeholder="Enter your gender">
+            <textarea name="address" ss" cols="30" rows="10" placeholder="Enter your address"></textarea>
+            <textarea name="more"  cols="30" rows="10" placeholder="More about you.."></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
