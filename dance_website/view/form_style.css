@@ -1,0 +1,15 @@
+.h1{
+   text-align: center;
+   margin: 12px 0;
+ }
+
+.myform{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.myInput{
+   font-size: 16px;
+}
